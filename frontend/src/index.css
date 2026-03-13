@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 248 248 250;
+  --fg: 15 23 42;
+  --muted: 100 116 139;
+  --card: 255 255 255;
+  --border: 226 232 240;
+  --accent: 245 158 11;
+  --accent-foreground: 255 255 255;
+}
+
+.dark {
+  --bg: 12 17 28;
+  --fg: 226 232 240;
+  --muted: 148 163 184;
+  --card: 22 27 40;
+  --border: 51 65 85;
+  --accent: 56 189 248;
+  --accent-foreground: 6 8 12;
+}
+
+.theme-1 { --accent: 59 130 246; }
+.theme-2 { --accent: 16 185 129; }
+.theme-3 { --accent: 244 63 94; }
+.theme-4 { --accent: 249 115 22; }
+.theme-5 { --accent: 139 92 246; }
+.theme-6 { --accent: 14 165 233; }
+.theme-7 { --accent: 34 197 94; }
+.theme-8 { --accent: 234 179 8; }
+.theme-9 { --accent: 236 72 153; }
+.theme-10 { --accent: 20 184 166; }
+.theme-11 { --accent: 168 85 247; }
+.theme-12 { --accent: 245 158 11; }
+
+body {
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(var(--accent), 0.08), transparent 60%),
+              radial-gradient(1000px 500px at 80% 20%, rgba(56, 189, 248, 0.12), transparent 60%),
+              rgb(var(--bg));
+  color: rgb(var(--fg));
+  min-height: 100vh;
+}
+
+.app-card {
+  background: rgb(var(--card));
+  border: 1px solid rgb(var(--border));
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.text-muted { color: rgb(var(--muted)); }
+.bg-accent { background: rgb(var(--accent)); }
+.text-accent { color: rgb(var(--accent)); }
+.border-base { border-color: rgb(var(--border)); }
+
+.icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(var(--border));
+  background: rgba(255,255,255,0.7);
+  flex-shrink: 0;
+}
+
+.icon-btn:hover {
+  background: rgba(15,23,42,0.06);
+}
+
+.dark .icon-btn {
+  background: rgba(15,23,42,0.4);
+}
+
+.theme-dropdown {
+  position: relative;
+}
+
+.theme-dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 50;
+  background: rgb(var(--card));
+  border: 1px solid rgb(var(--border));
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+}
+
+.theme-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.15);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.theme-dropdown-menu .theme-swatch {
+  width: 32px;
+  height: 32px;
+}

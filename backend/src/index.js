@@ -24,10 +24,21 @@ app.use(morgan("dev"));
 app.use(express.json({ limit: "10mb" }));
 app.use(cookieParser());
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://project-1-two-sage.vercel.app",
+];
+
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN || "https://www.sportsdpsp.lk",
-    credentials: true
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
   })
 );
 

@@ -43,7 +43,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen grid lg:grid-cols-2">
+    <div className="min-h-screen grid lg:grid-cols-2 ">
       <div className="flex items-center justify-center p-8 bg-white ">
         <Card className="w-full max-w-md">
           <div className="flex items-center justify-between mb-6">
@@ -76,8 +76,7 @@ export default function Login() {
         <img
           src="/sos.jpg"
           alt="sports login"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+          className="absolute inset-0 h-full w-full object-cover"/>
         
         <div className="absolute inset-0 bg-slate-900/30" />
       </div>

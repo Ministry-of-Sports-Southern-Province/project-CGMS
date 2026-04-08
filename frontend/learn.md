@@ -7,3 +7,4 @@ commit daily-2
 commit daily-3
 learn.md will be update from current daily commit
 structure of db is umchanged 
+but need better solution for general or default categories
